@@ -52,7 +52,7 @@ const projects: Project[] = [
     title: 'TikTok Downloader',
     url: 'https://kotkit.deno.dev/',
     icon: 'logos:tiktok-icon',
-    content: 'TikTok Downloader made with Deno Fresh',
+    content: 'TikTok Downloader made with NextJS',
   },
   {
     title: 'M3 Jenkinsfile',
@@ -62,7 +62,7 @@ const projects: Project[] = [
       'Cross Platform Jenkins Multi Branch Pipeline for Maven Multi-Module Project',
   },
   {
-    title: 'T3 TMDB',
+    title: 'Nebula',
     url: 'https://t3-tmdb.vercel.app/',
     icon: 'cib:the-movie-database',
     content:
