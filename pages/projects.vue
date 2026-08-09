@@ -76,7 +76,7 @@ const projects: Project[] = [
   },
   {
     title: 'Online Portfolio',
-    url: 'https://mrguamos.vercel.app/',
+    url: 'https://resume.mrqg.dev/',
     icon: 'bytesize:portfolio',
     content: 'My Personal Website',
   },
