@@ -1,210 +1,234 @@
 <template>
-  <div class="flex flex-col w-full mb-10">
-    <div
-      class="bg-gradient-to-r from-green-100 via-green-200 to-green-300 flex"
+  <div class="mx-auto mb-16 flex w-full max-w-6xl flex-col px-6">
+    <section
+      class="relative flex min-h-[70vh] flex-col-reverse items-center justify-center gap-12 py-16 lg:flex-row lg:justify-between"
     >
-      <div
-        class="flex flex-col text-center xl:text-left xl:w-[40%] space-y-5 xl:pl-10 xl:pr-0 p-10"
-      >
-        <span class="font-semibold text-4xl md:whitespace-nowrap"
-          >Mark Ryan Guamos</span
+      <div class="flex max-w-2xl flex-col text-center lg:text-left">
+        <span
+          v-reveal
+          class="font-mono text-xs uppercase tracking-[0.4em] text-cyan-400"
+          >&gt; initializing profile_</span
         >
-        <span class="font-light text-2xl md:whitespace-nowrap"
-          >Senior Software Engineer</span
+        <h1
+          v-reveal="100"
+          class="mt-6 text-5xl font-bold leading-tight text-white md:text-7xl"
         >
-        <div>
-          <span class="font-extralight">
-            A software engineer that has a 10+ years of experience in fullstack
-            development for complex scalable web apps. Want to know how I may
-            help with your project? Please check out my
-            <NuxtLink to="/resume" class="text-blue-700"> resume</NuxtLink
-            >.</span
+          Mark Ryan
+          <span class="gradient-text">Guamos</span>
+        </h1>
+        <div
+          v-reveal="200"
+          class="mt-6 flex items-center justify-center font-mono text-lg text-slate-300 md:text-2xl lg:justify-start"
+        >
+          <span class="mr-3 text-cyan-400">$</span>
+          <span>{{ typed }}</span>
+          <span
+            class="ml-1 inline-block h-6 w-3 bg-cyan-400 animate-blink"
+          ></span>
+        </div>
+        <p
+          v-reveal="300"
+          class="mt-8 font-light leading-relaxed text-slate-400"
+        >
+          A software engineer with 10+ years of experience in fullstack
+          development for complex, scalable web apps. Want to know how I can
+          help with your project?
+        </p>
+        <div
+          v-reveal="400"
+          class="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start"
+        >
+          <NuxtLink
+            href="/Resume-Mark-Ryan-Guamos.pdf"
+            target="_blank"
+            class="neon-border group inline-flex items-center rounded-xl bg-cyan-400/10 px-6 py-3 font-medium text-cyan-300 transition hover:bg-cyan-400/20 hover:shadow-[0_0_30px_-5px_rgba(34,211,238,0.6)]"
           >
+            Download Resume
+            <Icon
+              name="grommet-icons:document-pdf"
+              class="ml-2 h-5 w-5 transition-transform group-hover:scale-110"
+            />
+          </NuxtLink>
+          <NuxtLink
+            to="/projects"
+            class="glass glass-hover inline-flex items-center rounded-xl px-6 py-3 font-medium text-slate-300 hover:text-white"
+          >
+            Explore Projects
+          </NuxtLink>
         </div>
       </div>
-    </div>
-    <span class="text-center mt-10 font-bold text-2xl">Skills</span>
-    <div
-      class="grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-4 gap-y-10 xl:p-10 mt-5"
-    >
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span><Icon name="logos:java" class="w-7 h-7" /></span>
-        <span class="font-bold">Java</span>
-        <span class="font-light text-xs">Years of Exp: 12</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span><Icon name="logos:spring-icon" class="w-7 h-7" /></span>
-        <span class="font-bold">Spring</span>
-        <span class="font-light text-xs">Years of Exp: 12</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span><Icon name="logos:hibernate" class="w-7 h-7" /></span>
-        <span class="font-bold">Hibernate</span>
-        <span class="font-light text-xs">Years of Exp: 12</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
+
+      <div v-reveal="200" class="group relative shrink-0 animate-float">
+        <div
+          class="absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 opacity-50 blur-lg transition duration-500 group-hover:opacity-90"
+        ></div>
+        <div
+          class="absolute -inset-5 rounded-full border border-dashed border-cyan-400/30 animate-spin-slow"
+        ></div>
         <NuxtImg
-          format="webp"
           quality="80"
-          loading="lazy"
-          src="mybatis.png"
-          width="28"
-          height="28"
-          alt="mybatis"
+          preload
+          src="avatar.webp"
+          class="relative rounded-full border-2 border-white/20"
+          width="230"
+          height="230"
+          alt="avatar"
         />
-        <span class="font-bold">MyBatis</span>
-        <span class="font-light text-xs">Years of Exp: 4</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-        </span>
       </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span><Icon name="logos:selenium" class="w-7 h-7 rounded-md" /></span>
-        <span class="font-bold">Selenium</span>
-        <span class="font-light text-xs">Years of Exp: 5</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-        </span>
+    </section>
+
+    <section class="mt-4">
+      <div v-reveal class="flex items-center">
+        <h2 class="text-3xl font-bold text-white">
+          <span class="gradient-text">//</span> Skills
+        </h2>
+        <div
+          class="ml-6 h-px grow bg-gradient-to-r from-cyan-400/40 to-transparent"
+        ></div>
       </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span><Icon name="logos:kubernetes" class="w-7 h-7" /></span>
-        <span class="font-bold">Kubernetes</span>
-        <span class="font-light text-xs">Years of Exp: 3</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-        </span>
+
+      <div class="mt-10 space-y-10">
+        <div
+          v-for="(category, index) in categories"
+          :key="category.name"
+          v-reveal="index * 100"
+        >
+          <span
+            class="font-mono text-xs uppercase tracking-[0.35em] text-cyan-400/80"
+            >{{ category.name }}</span
+          >
+          <div class="mt-4 flex flex-wrap gap-3">
+            <div
+              v-for="skill in category.skills"
+              :key="skill.name"
+              class="glass glass-hover flex items-center space-x-2.5 rounded-xl px-4 py-2.5"
+            >
+              <NuxtImg
+                v-if="skill.image"
+                format="webp"
+                quality="80"
+                loading="lazy"
+                :src="skill.image"
+                width="20"
+                height="20"
+                :alt="skill.name"
+              />
+              <Icon v-else :name="skill.icon" class="h-5 w-5 rounded-sm" />
+              <span class="text-sm font-medium text-slate-200">{{
+                skill.name
+              }}</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span><Icon name="logos:docker-icon" class="w-7 h-7" /></span>
-        <span class="font-bold">Docker</span>
-        <span class="font-light text-xs">Years of Exp: 3</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span class="inline-flex space-x-2"
-          ><Icon name="logos:solidity" class="w-7 h-7" />
-          <Icon name="logos:web3js" class="w-7 h-7" />
-        </span>
-        <span class="font-bold">Blockchain</span>
-        <span class="font-light text-xs">Years of Exp: 1</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span><Icon name="logos:javascript" class="w-7 h-7 rounded-md" /></span>
-        <span class="font-bold">Javascript</span>
-        <span class="font-light text-xs">Years of Exp: 6</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span class="inline-flex space-x-2">
-          <Icon name="logos:react" class="w-7 h-7" />
-        </span>
-        <span class="font-bold">React</span>
-        <span class="font-light text-xs">Years of Exp: 1</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span class="inline-flex space-x-2">
-          <Icon name="logos:angular-icon" class="w-7 h-7" />
-        </span>
-        <span class="font-bold">Angular</span>
-        <span class="font-light text-xs">Years of Exp: 3</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-        </span>
-      </div>
-      <div class="flex flex-col space-y-1 shadow-xl rounded-lg p-2">
-        <span class="inline-flex space-x-2"
-          ><Icon name="logos:postgresql" class="w-7 h-7" />
-          <Icon name="logos:mysql" class="w-7 h-7" />
-        </span>
-        <span class="font-bold">SQL</span>
-        <span class="font-light text-xs">Years of Exp: 12</span>
-        <span class="flex items-center text-xs"
-          >Rating:
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star" class="text-yellow-300 w-5 h-5" />
-          <Icon name="material-symbols:star-outline" class="w-5 h-5" />
-        </span>
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+type SkillChip = {
+  name: string
+  icon?: string
+  image?: string
+}
 
-<style scoped></style>
+type Category = {
+  name: string
+  skills: SkillChip[]
+}
+
+const categories: Category[] = [
+  {
+    name: 'Backend',
+    skills: [
+      { name: 'Java', icon: 'logos:java' },
+      { name: 'Spring Boot', icon: 'logos:spring-icon' },
+      { name: 'SQL', icon: 'logos:postgresql' },
+      { name: 'JPA', icon: 'mdi:database-sync' },
+      { name: 'Hibernate', icon: 'logos:hibernate' },
+      { name: 'MyBatis', image: 'mybatis.png' },
+      { name: 'NATS', icon: 'simple-icons:natsdotio' },
+      { name: 'Pub/Sub', icon: 'mdi:message-processing' },
+      { name: 'Message Queue', icon: 'mdi:tray-full' },
+      { name: 'WebSocket', icon: 'mdi:transit-connection-variant' },
+    ],
+  },
+  {
+    name: 'Frontend',
+    skills: [
+      { name: 'JavaScript', icon: 'logos:javascript' },
+      { name: 'TypeScript', icon: 'logos:typescript-icon' },
+      { name: 'React', icon: 'logos:react' },
+      { name: 'Vue', icon: 'logos:vue' },
+      { name: 'Angular', icon: 'logos:angular-icon' },
+      { name: 'TailwindCSS', icon: 'logos:tailwindcss-icon' },
+      { name: 'HTML5', icon: 'logos:html-5' },
+    ],
+  },
+  {
+    name: 'DevOps & Cloud',
+    skills: [
+      { name: 'Docker', icon: 'logos:docker-icon' },
+      { name: 'Kubernetes', icon: 'logos:kubernetes' },
+      { name: 'CI/CD', icon: 'mdi:infinity' },
+      { name: 'AWS', icon: 'logos:aws' },
+      { name: 'Terraform', icon: 'logos:terraform-icon' },
+      { name: 'ArgoCD', icon: 'devicon:argocd' },
+      { name: 'Selenium', icon: 'logos:selenium' },
+      { name: 'Playwright', icon: 'devicon:playwright' },
+    ],
+  },
+  {
+    name: 'Others',
+    skills: [
+      { name: 'Blockchain', icon: 'mdi:link-variant' },
+      { name: 'Solidity', icon: 'logos:solidity' },
+      { name: 'Web3', icon: 'logos:web3js' },
+      { name: 'Generative AI', icon: 'mdi:robot-outline' },
+    ],
+  },
+]
+
+const phrases = [
+  'Senior Software Engineer',
+  'Fullstack Developer',
+  'Cloud & DevOps Enthusiast',
+  'Blockchain Explorer',
+]
+
+const typed = ref('')
+let phraseIndex = 0
+let charIndex = 0
+let deleting = false
+let timer: ReturnType<typeof setTimeout>
+
+const type = () => {
+  const current = phrases[phraseIndex]
+  if (!deleting) {
+    charIndex++
+    typed.value = current.slice(0, charIndex)
+    if (charIndex === current.length) {
+      deleting = true
+      timer = setTimeout(type, 2000)
+      return
+    }
+    timer = setTimeout(type, 70)
+  } else {
+    charIndex--
+    typed.value = current.slice(0, charIndex)
+    if (charIndex === 0) {
+      deleting = false
+      phraseIndex = (phraseIndex + 1) % phrases.length
+    }
+    timer = setTimeout(type, 35)
+  }
+}
+
+onMounted(() => {
+  timer = setTimeout(type, 400)
+})
+
+onBeforeUnmount(() => {
+  clearTimeout(timer)
+})
+</script>

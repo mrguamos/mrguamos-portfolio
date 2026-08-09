@@ -1,45 +1,39 @@
 <template>
-  <div class="flex w-full flex-col mb-10">
-    <div
-      class="flex flex-col bg-gradient-to-r from-green-100 via-green-200 to-green-300 items-center justify-center p-20"
-    >
-      <span class="font-semibold text-4xl md:whitespace-nowrap text-center"
-        >Projects</span
+  <div class="mx-auto mb-16 flex w-full max-w-6xl flex-col px-6">
+    <section class="pt-16 pb-6">
+      <span
+        v-reveal
+        class="font-mono text-xs uppercase tracking-[0.4em] text-cyan-400"
+        >&gt; loading modules_</span
       >
-    </div>
-    <!-- <div class="flex flex-col grow lg:m-20 items-center justify-center">
-      <Icon name="fa6-solid:road-barrier" class="w-32 h-32 text-yellow-500" />
-      <span class="font-semibold text-5xl">WIP</span>
+      <h1 v-reveal="100" class="mt-4 text-5xl font-bold text-white md:text-6xl">
+        <span class="gradient-text">//</span> Projects
+      </h1>
+      <p v-reveal="200" class="mt-4 max-w-xl font-light text-slate-400">
+        A few things I built while exploring different stacks: blockchain, edge
+        runtimes, CI pipelines, and frontend frameworks.
+      </p>
+    </section>
 
-      <div class="flex mt-10">
-        <span
-          class="bg-green-500 left-[-10px] w-3 h-3 inline-block top-0 before rounded-full"
-        ></span>
-        <div
-          class="dot-collision relative w-3 h-3 rounded-full bg-orange-500"
-        ></div>
-        <span
-          class="bg-red-500 left-[10px] w-3 h-3 inline-block top-0 rounded-full after"
-        ></span>
-      </div>
-    </div> -->
-    <div
-      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-10 px-10 mt-5"
-    >
-      <ProjectCards
-        v-for="project in projects"
+    <section class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div
+        v-for="(project, index) in projects"
         :key="project.url"
-        :title="project.title"
-        :url="project.url"
-        :icon="project.icon"
-        >{{ project.content }}</ProjectCards
+        v-reveal="(index % 3) * 120"
       >
-    </div>
+        <ProjectCards
+          :title="project.title"
+          :url="project.url"
+          :icon="project.icon"
+          class="h-full"
+          >{{ project.content }}</ProjectCards
+        >
+      </div>
+    </section>
   </div>
 </template>
-<script setup lang="ts">
-import ProjectCards from '~~/components/ProjectCards.vue'
 
+<script setup lang="ts">
 type Project = {
   title: string
   url: string
@@ -88,35 +82,3 @@ const projects: Project[] = [
   },
 ]
 </script>
-
-<style scoped>
-@keyframes before {
-  0%,
-  50%,
-  75%,
-  100% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(-10px, -15px);
-  }
-}
-@keyframes after {
-  0%,
-  50%,
-  75%,
-  100% {
-    transform: translate(0, 0px);
-  }
-  25% {
-    transform: translate(10px, -15px);
-  }
-}
-.before {
-  animation: before 2s infinite ease-in;
-}
-.after {
-  animation: after 2s infinite ease-in;
-  animation-delay: 1s;
-}
-</style>

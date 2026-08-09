@@ -1,28 +1,16 @@
 <template>
-  <div class="flex min-h-screen w-full">
-    <button
-      class="xl:hidden fixed top-5 right-5 backdrop-blur-sm"
-      aria-label="Menu"
-      @click="toggleDrawer"
-    >
-      <Icon name="carbon:menu" class="h-10 w-10" />
-    </button>
-    <SideNav />
-    <SideNavMobile :toggle="drawer" @close="toggleDrawer" />
+  <div class="relative flex min-h-screen w-full flex-col bg-void">
+    <AuroraBackdrop />
+    <ClientOnly>
+      <ParticleField />
+    </ClientOnly>
 
-    <main class="flex w-full bg-slate-100/50">
-      <slot class="mb-10" />
+    <TopNav />
+
+    <main class="relative z-10 flex w-full grow flex-col pt-24">
+      <slot />
     </main>
+
+    <SiteFooter />
   </div>
 </template>
-
-<script setup lang="ts">
-const drawer = ref(false)
-const toggleDrawer = () => {
-  drawer.value = !drawer.value
-  if (drawer.value) document.body.style.overflow = 'hidden'
-  else document.body.style.overflow = 'unset'
-}
-</script>
-
-<style scoped></style>
