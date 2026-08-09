@@ -70,7 +70,7 @@ const projects: Project[] = [
   },
   {
     title: 'PokeNext',
-    url: 'https://pokenext-fawn.vercel.app/',
+    url: 'https://pokenext.mrqg.dev/',
     icon: 'arcticons:pokemon-unite',
     content: 'Pokemon Gallery powered by PokéAPI',
   },
