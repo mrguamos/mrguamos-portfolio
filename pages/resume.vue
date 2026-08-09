@@ -55,17 +55,13 @@
       </div>
 
       <ol class="relative mt-10 space-y-8 border-l border-cyan-400/20 pl-8">
-        <li
-          v-for="(job, index) in resume.work"
-          :key="job.name + job.startDate"
-          v-reveal="index * 80"
-        >
+        <li v-for="(job, index) in resume.work" :key="job.name + job.startDate">
           <span
             class="absolute -left-[7px] mt-7 h-3.5 w-3.5 rounded-full border border-cyan-300/60 bg-void shadow-[0_0_12px_rgba(34,211,238,0.8)]"
           >
             <span class="absolute inset-1 rounded-full bg-cyan-300"></span>
           </span>
-          <div class="glass glass-hover rounded-2xl p-6">
+          <div v-reveal="index * 80" class="glass glass-hover rounded-2xl p-6">
             <div
               class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between"
             >
