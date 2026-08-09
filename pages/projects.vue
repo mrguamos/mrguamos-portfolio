@@ -50,7 +50,7 @@ const projects: Project[] = [
   },
   {
     title: 'TikTok Downloader',
-    url: 'https://kotkit.deno.dev/',
+    url: 'https://kotkit.mrqg.dev/',
     icon: 'logos:tiktok-icon',
     content: 'TikTok Downloader made with NextJS',
   },
@@ -63,7 +63,7 @@ const projects: Project[] = [
   },
   {
     title: 'Nebula',
-    url: 'https://t3-tmdb.vercel.app/',
+    url: 'https://nebula.mrqg.dev/',
     icon: 'cib:the-movie-database',
     content:
       'Movie app demo built using NextJS, React, TailwindCSS, The Movie Database API and TypeScript.',
