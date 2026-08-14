@@ -44,7 +44,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: 'DefiKnight',
-    url: 'https://dk-website-mrguamos.vercel.app',
+    url: 'https://defiknight.mrqg.dev/',
     icon: 'skill-icons:solidity',
     content: 'Play To Earn Fantasy Medieval Blockchain NFT GAME',
   },
