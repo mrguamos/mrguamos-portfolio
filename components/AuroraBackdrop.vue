@@ -1,13 +1,16 @@
 <template>
   <div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
     <div
-      class="absolute -top-40 -left-40 h-[34rem] w-[34rem] rounded-full bg-cyan-500/20 blur-[120px] animate-aurora"
+      class="absolute -top-60 -left-60 h-[44rem] w-[44rem] animate-aurora"
+      style="background: radial-gradient(circle, rgba(6, 182, 212, 0.2), transparent 70%)"
     />
     <div
-      class="absolute top-1/3 -right-40 h-[30rem] w-[30rem] rounded-full bg-violet-600/20 blur-[120px] animate-aurora-slow"
+      class="absolute top-1/4 -right-60 h-[40rem] w-[40rem] animate-aurora-slow"
+      style="background: radial-gradient(circle, rgba(124, 58, 237, 0.2), transparent 70%)"
     />
     <div
-      class="absolute -bottom-40 left-1/3 h-[28rem] w-[28rem] rounded-full bg-fuchsia-600/10 blur-[120px] animate-aurora"
+      class="absolute -bottom-60 left-1/4 h-[38rem] w-[38rem] animate-aurora"
+      style="background: radial-gradient(circle, rgba(192, 38, 211, 0.1), transparent 70%)"
     />
     <div class="grid-bg absolute inset-0" />
   </div>
